@@ -1,0 +1,289 @@
+$main: #674b98;
+$main-darker: #473469;
+$secondary: #63e1d4;
+$text: #555555;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cabin';
+  font-size: 1.2em;
+  color: $text;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: $main;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 3px rgba(100,100,100,0.5);
+  z-index: 2;
+
+  .fas {
+    display: inline-block;
+    color: $secondary;
+    font-size: 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: lighten($secondary, 10%); 
+    }
+  }
+
+  button#menu-toggle {
+    position: relative;
+    top: -10px;
+    background: none;
+    border: 0;
+  }
+  
+  nav#menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    padding: 65px 0 0 0;
+    background: $main-darker;
+    transform: translate(-100%,0);
+    transition: transform 200ms ease-out;
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow: scroll;
+
+    i#menu-close {
+      position: fixed;
+      top: 17px;
+      right: 20px;
+      font-size: 30px;
+    }
+
+    &:hover {
+      color: lighten($secondary, 10%);
+    }
+
+    a {
+      display: block;
+      padding: 20px;
+      color: $secondary;
+      font-size: 20px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 600;
+
+      &:hover {
+        background: $main;
+      }
+    }
+    
+    .children > a {
+      padding: 10px;
+      font-size: 18px;
+      font-weight: 400;
+    }  
+
+    &.visible {
+      transform: translate(0,0);
+      transition: transform 200ms ease-out;
+    }
+  }
+
+  img {
+    padding: 5px 10px;
+  }
+}
+
+div.nav-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  opacity: 0%;
+  transform: translate(-100%,0);
+
+  &.visible {
+    opacity: 100%;
+    z-index: 500;
+    transform: translate(0,0);
+    transition: opacity 200ms ease-in;
+  }
+}
+
+@media screen and (min-device-width: 1000px) and (orientation: landscape) {
+  header {
+    nav#menu {
+      width: 400px;
+      
+      a {
+        padding-left: 30px;
+        text-align: left; 
+      }
+
+      .children > a {
+        padding-left: 50px;
+      }
+    } 
+  }
+}
+
+section#index-image {
+  background: url('/index.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  div.bottom {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    padding: 75px;
+    
+    h1 {
+      font-family: 'Merriweather';
+      font-size: 50px;
+      color: $secondary;
+      margin: 0;
+      padding: 20px 0;
+    }
+
+    span {
+      font-family: 'Cabin';
+      font-size: 25px;
+      color: $secondary;
+    }
+  }
+}
+
+section#features {
+  padding: 75px;
+
+  div.feature {
+    padding-bottom: 50px;
+    
+    i.fa-solid {
+      color: lighten($main, 20%);
+      font-size: 50px;
+    }
+
+    h2 {
+      font-family: 'Merriweather', Sans;
+      color: $main;
+      font-size: 25px;
+      margin: 25px 0 10px 0;
+    }
+  }
+}
+
+@media screen and (min-device-width: 1000px) and (orientation: landscape) {
+  section#features {
+    column-count: 3;
+
+    div.feature {
+      text-align: center;
+    }
+  }
+}
+
+section#book {
+  background: lighten($secondary, 10%);
+  padding: 100px 75px;
+  position: relative;
+
+  h2 {
+    font-family: 'Merriweather'; 
+    color: $main-darker;
+    padding-top: 25px;
+  }
+}
+
+@media screen and (min-device-width: 1000px) and (orientation: landscape) {
+  section#book {
+    overflow: hidden; 
+
+    img {
+      position: absolute; 
+      top: 50px;
+    }
+
+    h2 {
+      position: absolute;
+      top: 50px;
+      left: 275px;
+    }
+  }
+}
+
+section#main {
+  max-width: 1000px;
+  margin: 65px auto 0px auto;
+  padding: 75px 50px;
+  min-height: 50vh;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', Serif; 
+    color: $main;
+  }
+
+  h1 {
+    font-size: 2em;
+    margin-top: 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid lighten($main, 50%);
+  }
+
+  a {
+    color: darken($secondary, 20%);
+
+    &:hover {
+      color: $secondary;
+      text-decoration: none;
+    }
+  }
+
+  .article {
+    h1 {
+      font-size: 1.5em;
+      margin: 30px 0;
+      border-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      font-style: italic;
+    }
+    
+    h3 {
+      font-size: 1.2em;
+      color: lighten($text,20%);
+    }
+  }
+
+  .tagline {
+    font-family: 'Merriweather', Serif;
+    font-size: 1.3em;
+    font-style: italic;
+    color: lighten($text, 20%);
+    margin: 15px 0;
+  }
+
+  .modified {
+    font-size: 0.8em;
+    color: lighten($text, 20%);
+  }
+}
+
+footer {
+  background: $main-darker;
+  padding: 75px;
+  text-align: center;
+  color: #FFFFFF;
+}

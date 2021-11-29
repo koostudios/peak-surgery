@@ -1,0 +1,14 @@
+<meta charset="utf-8">
+{{ if .IsHome }}
+<title>{{ .Site.Title }}</title>
+{{ else }}
+<title>{{ .Title }} | {{ .Site.Title }}</title>
+{{ end }}
+<meta name="description" content="The unwritten secrets in a handy, concise guide">
+<meta name="theme-color" content="#674b98">
+<script src="https://kit.fontawesome.com/6b915392da.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,600;1,400&family=Merriweather:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+{{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify }}
+<link href="{{ $style.Permalink }}" rel="stylesheet">

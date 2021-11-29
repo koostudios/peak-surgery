@@ -1,0 +1,6 @@
+<footer>
+  &copy; 2021 Peak Surgery <br />
+  This #FOAMSurg site has been made with <i class="fas fa-heart"></i> in QLD, Australia.
+</footer>
+{{ $js := resources.Get "js/main.js" | resources.Minify }}
+<script async src="{{ $js.Permalink }}"></script>

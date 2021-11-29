@@ -1,0 +1,146 @@
+baseURL = "http://localhost:1313"
+languageCode = "en-au"
+theme = "peak"
+title = "Peak Surgery"
+[[menu.main]]
+identifier="topics"
+name="Topics"
+url="/topics/"
+weight=1
+[[menu.main]]
+identifier="the-rif-pain"
+name="The RIF Pain"
+url="/topics/the-rif-pain"
+parent="topics"
+weight=1
+[[menu.main]]
+identifier="the-ruq-pain"
+name="The RUQ Pain"
+url="/topics/the-ruq-pain"
+parent="topics"
+weight=2
+[[menu.main]]
+identifier="the-abscess"
+name="The Abscess"
+url="/topics/the-abscess"
+parent="topics"
+weight=3
+[[menu.main]]
+identifier="the-anorectal-pathology"
+name="The Anorectal Pathology"
+url="/topics/the-anorectal-pathology"
+parent="topics"
+weight=4
+[[menu.main]]
+identifier="the-diverticulitis"
+name="The Diverticulitis"
+url="/topics/the-diverticulitis"
+parent="topics"
+weight=5
+[[menu.main]]
+identifier="the-pancreatitis"
+name="The Pancreatitis"
+url="/topics/the-pancreatitis"
+parent="topics"
+weight=6
+[[menu.main]]
+identifier="the-small-bowel-obstruction"
+name="The Small Bowel Obstruction"
+url="/topics/the-small-bowel-obstruction"
+parent="topics"
+weight=7
+[[menu.main]]
+identifier="the-large-bowel-obstruction"
+name="The Large Bowel Obstruction"
+url="/topics/the-large-bowel-obstruction"
+parent="topics"
+weight=8
+[[menu.main]]
+identifier="the-new-cancer"
+name="The New Cancer"
+url="/topics/the-new-cancer"
+parent="topics"
+weight=9
+[[menu.main]]
+identifier="the-lower-gi-bleeder"
+name="The Lower GI Bleeder"
+url="/topics/the-lower-gi-bleeder"
+parent="topics"
+weight=10
+[[menu.main]]
+identifier="the-yellow-patient"
+name="The Yellow Patient"
+url="/topics/the-yellow-patient"
+parent="topics"
+weight=11
+[[menu.main]]
+identifier="the-rib-fracture"
+name="The Rib Fracture"
+url="/topics/the-rib-fracture"
+parent="topics"
+weight=12
+[[menu.main]]
+identifier="the-multitrauma"
+name="The Multitrauma"
+url="/topics/the-multitrauma"
+parent="topics"
+weight=13
+[[menu.main]]
+identifier="the-hernia"
+name="The Hernia"
+url="/topics/the-hernia"
+parent="topics"
+weight=14
+[[menu.main]]
+identifier="the-perforation"
+name="The Perforation"
+url="/topics/the-perforation"
+parent="topics"
+weight=15
+[[menu.main]]
+identifier="the-breast-abscess"
+name="The Breast Abscess"
+url="/topics/the-breast-abscess"
+parent="topics"
+weight=16
+[[menu.main]]
+identifier="the-soft-tissue-infection"
+name="The Soft Tissue Infection"
+url="/topics/the-hernia"
+parent="topics"
+weight=17
+[[menu.main]]
+identifier="the-child"
+name="The Child"
+url="/topics/the-child"
+parent="topics"
+weight=18
+[[menu.main]]
+identifier="the-dead-leg"
+name="The Dead Leg"
+url="/topics/the-dead-leg"
+parent="topics"
+weight=19
+[[menu.main]]
+identifier="the-hernia"
+name="The Hernia"
+url="/topics/the-hernia"
+parent="topics"
+weight=20
+[[menu.main]]
+identifier="about"
+name="About"
+url="/about/"
+weight=2
+[[menu.main]]
+identifier="why-does-this-exist"
+name="Why Does This Exist?"
+url="/topics/why-does-this-exist"
+parent="about"
+weight=1
+[[menu.main]]
+identifier="new-author-guide"
+name="New Author Guide"
+url="/topics/new-author-guide"
+parent="about"
+weight=2

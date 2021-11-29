@@ -1,0 +1,16 @@
+<nav id="menu">
+  <i id="menu-close" class="fas fa-times"></i>
+  {{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+      <div class="children">
+      {{ range .Children }}
+        <a href="{{ .URL }}">{{ .Name }}</a> 
+      {{ end }}
+      </div>
+    {{ else }}
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    {{ end }}
+  {{ end }}
+</nav>
+<div class="nav-overlay"></div>
